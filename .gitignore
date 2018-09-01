@@ -1,2 +1,4 @@
 # gitignore file
 
+venv/
+bot_key.txt
