@@ -10,13 +10,17 @@ import aiohttp
 from gidgethub.aiohttp import GitHubAPI
 
  
+with open('next_comment.txt', 'r') as cmnt:
+    text_object = cmnt.read()
+
+
 async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
         await gh.post('/repos/mariatta/strange-relationship/issues/127/comments',
               data={
-                  'title': 'My first comment',
-                  'body': 'I hope I got this comment thing right!',
+                  'title': 'My next comment',
+                  'body': text_object,
               })
 
 
