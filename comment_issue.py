@@ -9,7 +9,7 @@ import os
 import aiohttp
 from gidgethub.aiohttp import GitHubAPI
 
- 
+
 with open('next_comment.txt', 'r') as cmnt:
     text_object = cmnt.read()
 
