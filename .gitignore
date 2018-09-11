@@ -3,3 +3,4 @@
 venv/
 bot_key.txt
 next_comment.txt
+set_gh_token.sh
