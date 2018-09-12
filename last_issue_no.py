@@ -1,5 +1,5 @@
 """
-This script retreives a listing of issues created by the user
+This script retreives the latest issue number created by the user
 """
 
 
