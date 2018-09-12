@@ -17,8 +17,8 @@ async def main():
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
         await gh.post('/repos/mariatta/strange-relationship/issues',
               data={
-                  'title': 'My bot likes to smile',
-                  'body': 'geokai says, Use more emoji!',
+                  'title': 'A new issue to test',
+                  'body': 'geokai says, I\'m almost a bot',
               })
 
 
