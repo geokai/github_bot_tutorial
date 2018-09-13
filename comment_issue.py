@@ -17,7 +17,7 @@ with open('next_comment.txt', 'r') as cmnt:
 async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
-        await gh.post('/repos/mariatta/strange-relationship/issues/127/comments',
+        await gh.post('/repos/mariatta/strange-relationship/issues/128/comments',
               data={
                   'title': 'My next comment',
                   'body': text_object,

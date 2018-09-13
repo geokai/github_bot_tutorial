@@ -14,7 +14,7 @@ async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
         await gh.patch('/repos/mariatta/strange-relationship/issues/128',
-              data={'state': 'closed'},
+              data={'state': 'open'},
               )
 
 

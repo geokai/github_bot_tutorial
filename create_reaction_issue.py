@@ -11,9 +11,9 @@ from gidgethub.aiohttp import GitHubAPI
 async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
-        await gh.post('/repos/mariatta/strange-relationship/issues/127/reactions',
+        await gh.post('/repos/mariatta/strange-relationship/issues/128/reactions',
               data={
-                  'content': 'hooray',
+                  'content': 'laugh',
               }, accept='application/vnd.github.squirrel-girl-preview+jsom')
 
 
