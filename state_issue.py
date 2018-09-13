@@ -1,6 +1,6 @@
 """
-this script closes an open issue
-- uses the PATCH method to send the command
+this script sets the state of an issue - [open|close]
+- uses the PATCH method to set the 'state' value
 """
 
 
@@ -13,7 +13,7 @@ from gidgethub.aiohttp import GitHubAPI
 async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "geokai", oauth_token=os.getenv("GH_AUTH"))
-        await gh.patch('/repos/mariatta/strange-relationship/issues/127',
+        await gh.patch('/repos/mariatta/strange-relationship/issues/128',
               data={'state': 'closed'},
               )
 
